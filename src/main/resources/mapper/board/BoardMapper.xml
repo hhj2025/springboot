@@ -6,10 +6,11 @@
 
     <select id="list" resultType="BoardListDTO">
         SELECT
-            BOARD_IDX,
-            USER_ID,
-            TITLE, CONTEXT,
-            CREATE_AT
+        BOARD_IDX,
+        USER_ID,
+        TITLE,
+        CONTEXT,
+        CREATE_AT
         FROM CYCI_BOARD;
     </select>
 

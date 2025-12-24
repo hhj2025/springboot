@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.soft.shopping.mapper.MemberMapper">
+
+    <select id="login" resultType="MemberLoginDTO" parameterType="String">
+        SELECT
+        USER_ID,
+        USER_PW
+        FROM CYCI_USER
+        WHERE
+        USER_ID = #{userId};
+    </select>
+
+    <insert id="register" parameterType="MemberRegisterDTO">
+        INSERT INTO CYCI_USER (USER_ID, USER_PW, USER_EMAIL) VALUES
+        (#{userId}, #{userPw}, #{userEmail})
+    </insert>
+
+
+</mapper>
